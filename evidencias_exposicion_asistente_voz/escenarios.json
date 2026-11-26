@@ -1,0 +1,5137 @@
+[
+  {
+    "id": "01",
+    "nombre": "Compra válida",
+    "modo": "voz",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 8,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": [
+        {
+          "order_id": 1,
+          "session_id": "01",
+          "signature": "5754b9baf458a0f1",
+          "items": [
+            {
+              "product_id": "A1",
+              "title": "Auriculares azules",
+              "brand": "Desconocido",
+              "color": "azul",
+              "quantity": 2,
+              "unit_price": 20.0,
+              "subtotal": 40.0,
+              "available_stock": 10,
+              "stock_ok": true
+            }
+          ],
+          "total": 40.0,
+          "max_budget": null
+        }
+      ]
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0343,
+        "agente_s": 3.7707,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 34.3,
+        "T_LLM_ms": 3770.7,
+        "asr_s": 0.4669,
+        "tts_s": 16.1944,
+        "total_s": 20.4664,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 466.93,
+        "T_TTS_ms": 16194.36,
+        "T_Total_ms": 20466.36,
+        "audio_entrada": "evidencia-lab4/audios/01-01-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/01-01-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0484
+        },
+        "entidades": {},
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones.",
+        "calidad_voz": {
+          "retrotranscripcion": "auriculares negros código A2, 25 euros, 8 en stock, marca desconocido, color negro, auriculares azules código A1, 20 euros, 10 en stock, marca desconocido, color azul, cargador usbc, código 15 euros 7 en stock marca desconocido color blanco indica el código y la cantidad que quieres",
+          "wer_tts": 0.1176,
+          "cer_tts": 0.0456,
+          "secs": 0.6412,
+          "wer_asr": 0.0
+        }
+      },
+      {
+        "entrada": "Agrega dos unidades del producto A1 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 2,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "01",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 4.9939,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 4993.9,
+        "asr_s": 0.5004,
+        "tts_s": 4.5778,
+        "total_s": 10.0722,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 500.39,
+        "T_TTS_ms": 4577.83,
+        "T_Total_ms": 10072.16,
+        "audio_entrada": "evidencia-lab4/audios/01-02-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/01-02-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0682
+        },
+        "entidades": {
+          "cantidad": [
+            {
+              "variantes": "dos|2",
+              "error": false
+            }
+          ],
+          "producto": [
+            {
+              "variantes": "a1|a uno|a un|a 1",
+              "error": false
+            }
+          ]
+        },
+        "transcripcion_correcta": "Agrega dos unidades del producto A1 al carrito.",
+        "calidad_voz": {
+          "retrotranscripcion": "cotización 2 de auriculares azules total 40 euros para registrar el pedido di confirmó el pedido",
+          "wer_tts": 0.0588,
+          "cer_tts": 0.0303,
+          "secs": 0.6641,
+          "wer_asr": 0.0
+        }
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "success",
+            "order": {
+              "order_id": 1,
+              "session_id": "01",
+              "signature": "5754b9baf458a0f1",
+              "items": [
+                {
+                  "product_id": "A1",
+                  "title": "Auriculares azules",
+                  "brand": "Desconocido",
+                  "color": "azul",
+                  "quantity": 2,
+                  "unit_price": 20.0,
+                  "subtotal": 40.0,
+                  "available_stock": 10,
+                  "stock_ok": true
+                }
+              ],
+              "total": 40.0,
+              "max_budget": null
+            }
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0002,
+        "respuesta": "Pedido 1 registrado por 40.00 euros.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.2,
+        "asr_s": 0.364,
+        "tts_s": 1.2219,
+        "total_s": 1.586,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 363.96,
+        "T_TTS_ms": 1221.9,
+        "T_Total_ms": 1586.03,
+        "audio_entrada": "evidencia-lab4/audios/01-03-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/01-03-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0
+        },
+        "entidades": {},
+        "transcripcion_correcta": "Confirmo el pedido.",
+        "calidad_voz": {
+          "retrotranscripcion": "pedido uno registrado por 40 euros.",
+          "wer_tts": 0.2857,
+          "cer_tts": 0.1714,
+          "secs": 0.6199,
+          "wer_asr": 0.0
+        }
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "02",
+    "nombre": "Aclaración por solicitud ambigua",
+    "modo": "voz",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "busca auriculares para comparar las opciones?",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0403,
+        "agente_s": 3.757,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 40.3,
+        "T_LLM_ms": 3757.0,
+        "asr_s": 0.4645,
+        "tts_s": 18.0038,
+        "total_s": 22.2655,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 464.45,
+        "T_TTS_ms": 18003.78,
+        "T_Total_ms": 22265.54,
+        "audio_entrada": "evidencia-lab4/audios/02-01-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/02-01-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0484
+        },
+        "entidades": {},
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones.",
+        "calidad_voz": {
+          "retrotranscripcion": "auriculares negros, código A2, 25 euros, 8 en stock, marca, desconocido, color, negro, auriculares azules, código A1, 20 euros, 10 en stock, marca, desconocido, color, azul, Magos, cargador USB, código 1, 15 euros, 7 en stock, marca, desconocido, color, blanco, indica el código y la cantidad que quieres.",
+          "wer_tts": 0.1176,
+          "cer_tts": 0.0632,
+          "secs": 0.6716,
+          "wer_asr": 0.0
+        }
+      },
+      {
+        "entrada": "Agrégalo al carrito. ¡Oh!",
+        "operaciones": [
+          {
+            "accion": "aclarar"
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 4.9114,
+        "respuesta": "¿Cuál código y cantidad te gustaría agregar al carrito?",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 4911.4,
+        "asr_s": 0.5095,
+        "tts_s": 1.4761,
+        "total_s": 6.897,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 509.53,
+        "T_TTS_ms": 1476.07,
+        "T_Total_ms": 6897.02,
+        "audio_entrada": "evidencia-lab4/audios/02-02-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/02-02-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0
+        },
+        "entidades": {},
+        "transcripcion_correcta": "Agrégalo al carrito.",
+        "calidad_voz": {
+          "retrotranscripcion": "¿Cuál código y cantidad te gustaría agregar al carrito?",
+          "wer_tts": 0.0,
+          "cer_tts": 0.0,
+          "secs": 0.5252,
+          "wer_asr": 0.3333
+        }
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "03",
+    "nombre": "Cambio de cantidad con presupuesto",
+    "modo": "voz",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 9,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": 70.0,
+      "pedidos": [
+        {
+          "order_id": 1,
+          "session_id": "03",
+          "signature": "d46d55bde46e0927",
+          "items": [
+            {
+              "product_id": "A1",
+              "title": "Auriculares azules",
+              "brand": "Desconocido",
+              "color": "azul",
+              "quantity": 1,
+              "unit_price": 20.0,
+              "subtotal": 20.0,
+              "available_stock": 10,
+              "stock_ok": true
+            }
+          ],
+          "total": 20.0,
+          "max_budget": 70.0
+        }
+      ]
+    },
+    "turnos": [
+      {
+        "entrada": "busca auriculares con presupuesto máximo de 70 euros.",
+        "operaciones": [
+          {
+            "accion": "presupuesto",
+            "status": "success",
+            "session_id": "03",
+            "max_budget": 70.0
+          },
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.037,
+        "agente_s": 2.7907,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 37.0,
+        "T_LLM_ms": 2790.7,
+        "asr_s": 0.4743,
+        "tts_s": 16.3088,
+        "total_s": 19.6108,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 474.34,
+        "T_TTS_ms": 16308.8,
+        "T_Total_ms": 19610.8,
+        "audio_entrada": "evidencia-lab4/audios/03-01-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/03-01-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0484
+        },
+        "entidades": {
+          "importe": [
+            {
+              "variantes": "70|setenta",
+              "error": false
+            }
+          ]
+        },
+        "transcripcion_correcta": "Busca auriculares con presupuesto máximo de 70 euros.",
+        "calidad_voz": {
+          "retrotranscripcion": "auriculares negros, código A2, 25 euros, 8 en stock. marca desconocido, color negro, auriculares azules, código A1, 20 euros, 10 en stock. marca desconocido, color azul, cargador USB-C, código 1, 15 euros, 7 en stock. desconocido, color, blanco, indica el código y la cantidad que quieres.",
+          "wer_tts": 0.098,
+          "cer_tts": 0.0561,
+          "secs": 0.6396,
+          "wer_asr": 0.0
+        }
+      },
+      {
+        "entrada": "Agrega dos unidades del producto A1 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 2,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "03",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": 70.0,
+            "within_budget": true,
+            "budget_remaining": 30.0,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 3.1658,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Presupuesto: 70.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 3165.8,
+        "asr_s": 0.4855,
+        "tts_s": 6.0908,
+        "total_s": 9.7421,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 485.52,
+        "T_TTS_ms": 6090.77,
+        "T_Total_ms": 9742.11,
+        "audio_entrada": "evidencia-lab4/audios/03-02-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/03-02-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0652
+        },
+        "entidades": {
+          "cantidad": [
+            {
+              "variantes": "dos|2",
+              "error": false
+            }
+          ],
+          "producto": [
+            {
+              "variantes": "a1|a uno|a un|a 1",
+              "error": false
+            }
+          ]
+        },
+        "transcripcion_correcta": "Agrega dos unidades del producto A1 al carrito.",
+        "calidad_voz": {
+          "retrotranscripcion": "2 de auriculares azules total 40 euros presupuesto 70 euros punto para registrar el pedido di confirmo el pedido",
+          "wer_tts": 0.1905,
+          "cer_tts": 0.187,
+          "secs": 0.6792,
+          "wer_asr": 0.0
+        }
+      },
+      {
+        "entrada": "cambia la cantidad del producto a uno a una unidad.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 1,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "03",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 1,
+                "unit_price": 20.0,
+                "subtotal": 20.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 20.0,
+            "max_budget": 70.0,
+            "within_budget": true,
+            "budget_remaining": 50.0,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 3.2667,
+        "respuesta": "Cotización: 1 de Auriculares azules. Total: 20.00 euros. Presupuesto: 70.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 3266.7,
+        "asr_s": 0.5069,
+        "tts_s": 5.2876,
+        "total_s": 9.0612,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 506.88,
+        "T_TTS_ms": 5287.6,
+        "T_Total_ms": 9061.17,
+        "audio_entrada": "evidencia-lab4/audios/03-03-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/03-03-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0652
+        },
+        "entidades": {
+          "cantidad": [
+            {
+              "variantes": "una|uno|un|1",
+              "error": false
+            }
+          ],
+          "producto": [
+            {
+              "variantes": "a1|a uno|a un|a 1",
+              "error": false
+            }
+          ]
+        },
+        "transcripcion_correcta": "Cambia la cantidad del producto A1 a una unidad.",
+        "calidad_voz": {
+          "retrotranscripcion": "cotización 1 de auriculares azules total 20 euros presupuesto 70 euros para registrar el pedido de confirmó el pedido.",
+          "wer_tts": 0.1429,
+          "cer_tts": 0.0569,
+          "secs": 0.6588,
+          "wer_asr": 0.2222
+        }
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "success",
+            "order": {
+              "order_id": 1,
+              "session_id": "03",
+              "signature": "d46d55bde46e0927",
+              "items": [
+                {
+                  "product_id": "A1",
+                  "title": "Auriculares azules",
+                  "brand": "Desconocido",
+                  "color": "azul",
+                  "quantity": 1,
+                  "unit_price": 20.0,
+                  "subtotal": 20.0,
+                  "available_stock": 10,
+                  "stock_ok": true
+                }
+              ],
+              "total": 20.0,
+              "max_budget": 70.0
+            }
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0002,
+        "respuesta": "Pedido 1 registrado por 20.00 euros.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.2,
+        "asr_s": 0.349,
+        "tts_s": 1.2324,
+        "total_s": 1.5816,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 349.03,
+        "T_TTS_ms": 1232.36,
+        "T_Total_ms": 1581.58,
+        "audio_entrada": "evidencia-lab4/audios/03-04-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/03-04-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0
+        },
+        "entidades": {},
+        "transcripcion_correcta": "Confirmo el pedido.",
+        "calidad_voz": {
+          "retrotranscripcion": "Perido 1 registrado por 20 euros.",
+          "wer_tts": 0.2857,
+          "cer_tts": 0.1143,
+          "secs": 0.4808,
+          "wer_asr": 0.0
+        }
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "04",
+    "nombre": "Producto agotado al agregar",
+    "modo": "voz",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "busca auriculares para comparar las opciones.",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0748,
+        "agente_s": 4.9741,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 74.8,
+        "T_LLM_ms": 4974.1,
+        "asr_s": 0.4512,
+        "tts_s": 15.4093,
+        "total_s": 20.9093,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 451.15,
+        "T_TTS_ms": 15409.32,
+        "T_Total_ms": 20909.33,
+        "audio_entrada": "evidencia-lab4/audios/04-01-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/04-01-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0484
+        },
+        "entidades": {},
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones.",
+        "calidad_voz": {
+          "retrotranscripcion": "auriculares negros código A2, 25 euros, 8 en stock, marca desconocido, color negro, auriculares azules código A1, 20 euros, 10 en stock, marca desconocido, color azul, cargador USB-C Código 1, 15 euros, 7 en stock, marca, desconocido, color, blanco, indica el código y la cantidad que quieres.",
+          "wer_tts": 0.0784,
+          "cer_tts": 0.0351,
+          "secs": 0.6411,
+          "wer_asr": 0.0
+        }
+      },
+      {
+        "entrada": "Agrega una unidad del producto A3 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "insufficient_stock",
+            "product_id": "A3",
+            "title": "Auriculares verdes",
+            "requested": 1,
+            "available": 0,
+            "message": "Existencias insuficientes para 'Auriculares verdes' (A3): solicitaste 1, pero solo hay 0 en stock."
+          },
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "busca auriculares para comparar las opciones.",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0739,
+        "agente_s": 2.952,
+        "respuesta": "Existencias insuficientes para 'Auriculares verdes' (A3): solicitaste 1, pero solo hay 0 en stock. Alternativas encontradas: Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica cuál prefieres.",
+        "T_RAG_ms": 73.9,
+        "T_LLM_ms": 2952.0,
+        "asr_s": 0.5101,
+        "tts_s": 22.5082,
+        "total_s": 26.0441,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 510.09,
+        "T_TTS_ms": 22508.21,
+        "T_Total_ms": 26044.11,
+        "audio_entrada": "evidencia-lab4/audios/04-02-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/04-02-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0278
+        },
+        "entidades": {
+          "cantidad": [
+            {
+              "variantes": "una|uno|un|1",
+              "error": false
+            }
+          ],
+          "producto": [
+            {
+              "variantes": "a3|a tres|a 3",
+              "error": false
+            }
+          ]
+        },
+        "transcripcion_correcta": "Agrega una unidad del producto A3 al carrito.",
+        "calidad_voz": {
+          "retrotranscripcion": "Existencias insuficientes para auriculares verdes a 3 solicitaste 1, pero solo hay cero en stop. Alternativas encontradas, auriculares negros codiguados, 25 euros, 8 en stop, marca desconocido, color negro, auriculares azules, codigo a 1, 20 euros, 10 en stop, marca desconocido, color, azul, cargador USB-C, codijo 1, 15 euros, 7 en stock, marca, desconocido, color blanco, indica cuál prefieres.",
+          "wer_tts": 0.2419,
+          "cer_tts": 0.0735,
+          "secs": 0.7033,
+          "wer_asr": 0.0
+        }
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "05",
+    "nombre": "Corrección de transcripción",
+    "modo": "voz",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 8,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": [
+        {
+          "order_id": 1,
+          "session_id": "05",
+          "signature": "5754b9baf458a0f1",
+          "items": [
+            {
+              "product_id": "A1",
+              "title": "Auriculares azules",
+              "brand": "Desconocido",
+              "color": "azul",
+              "quantity": 2,
+              "unit_price": 20.0,
+              "subtotal": 40.0,
+              "available_stock": 10,
+              "stock_ok": true
+            }
+          ],
+          "total": 40.0,
+          "max_budget": null
+        }
+      ]
+    },
+    "turnos": [
+      {
+        "entrada": "busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "busca auriculares para comparar las opciones.",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0663,
+        "agente_s": 3.4006,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 66.3,
+        "T_LLM_ms": 3400.6,
+        "asr_s": 0.4492,
+        "tts_s": 16.4924,
+        "total_s": 20.4085,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 449.22,
+        "T_TTS_ms": 16492.41,
+        "T_Total_ms": 20408.54,
+        "audio_entrada": "evidencia-lab4/audios/05-01-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/05-01-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0484
+        },
+        "entidades": {},
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones.",
+        "calidad_voz": {
+          "retrotranscripcion": "auriculares negros, código A2, 25 euros, 8 en stock, marca, desconocido, color negro, auriculares azules, código A1, 20 euros, 10 en stock, marca, desconocido, color, azul, Cargador USB-C, Código 1, 15€, 7 en stock, marca, desconocido, color, blanco, indica el código y la cantidad que quieres.",
+          "wer_tts": 0.098,
+          "cer_tts": 0.0561,
+          "secs": 0.6884,
+          "wer_asr": 0.0
+        }
+      },
+      {
+        "entrada": "Agrega 5 unidades del producto aún no al carrito.",
+        "operaciones": [
+          {
+            "accion": "aclarar"
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 4.9308,
+        "respuesta": "¿Puedes indicar explícitamente el código del producto y la cantidad que deseas?",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 4930.8,
+        "asr_s": 0.5069,
+        "tts_s": 1.9121,
+        "total_s": 7.3499,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 506.91,
+        "T_TTS_ms": 1912.12,
+        "T_Total_ms": 7349.89,
+        "audio_entrada": "evidencia-lab4/audios/05-02-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/05-02-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0732
+        },
+        "entidades": {
+          "cantidad": [
+            {
+              "variantes": "cinco|5",
+              "error": false
+            }
+          ],
+          "producto": [
+            {
+              "variantes": "a1|a uno|a un|a 1",
+              "error": true
+            }
+          ]
+        },
+        "transcripcion_correcta": "Agrega cinco unidades del producto A1 al carrito.",
+        "calidad_voz": {
+          "retrotranscripcion": "Puedes indicar explícitamente el código del producto y la cantidad que deseas.",
+          "wer_tts": 0.0,
+          "cer_tts": 0.0,
+          "secs": 0.594,
+          "wer_asr": 0.375
+        }
+      },
+      {
+        "entrada": "Corrijo la transcripción anterior, dije dos unidades del producto A1, no cinco puntos.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 2,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "05",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 2.9804,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 2980.4,
+        "asr_s": 0.6471,
+        "tts_s": 5.8022,
+        "total_s": 9.4297,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 647.06,
+        "T_TTS_ms": 5802.19,
+        "T_Total_ms": 9429.67,
+        "audio_entrada": "evidencia-lab4/audios/05-03-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/05-03-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0682
+        },
+        "entidades": {
+          "cantidad": [
+            {
+              "variantes": "dos|2",
+              "error": false
+            },
+            {
+              "variantes": "cinco|5",
+              "error": false
+            }
+          ],
+          "producto": [
+            {
+              "variantes": "a1|a uno|a un|a 1",
+              "error": false
+            }
+          ]
+        },
+        "transcripcion_correcta": "Corrijo la transcripción anterior: dije dos unidades del producto A1, no cinco.",
+        "calidad_voz": {
+          "retrotranscripcion": "cotización 2 de auriculares azules, total 40 euros, para registrar el pedido di, confirmo el pedido",
+          "wer_tts": 0.0588,
+          "cer_tts": 0.0303,
+          "secs": 0.6785,
+          "wer_asr": 0.0833
+        }
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "success",
+            "order": {
+              "order_id": 1,
+              "session_id": "05",
+              "signature": "5754b9baf458a0f1",
+              "items": [
+                {
+                  "product_id": "A1",
+                  "title": "Auriculares azules",
+                  "brand": "Desconocido",
+                  "color": "azul",
+                  "quantity": 2,
+                  "unit_price": 20.0,
+                  "subtotal": 40.0,
+                  "available_stock": 10,
+                  "stock_ok": true
+                }
+              ],
+              "total": 40.0,
+              "max_budget": null
+            }
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0002,
+        "respuesta": "Pedido 1 registrado por 40.00 euros.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.2,
+        "asr_s": 0.3571,
+        "tts_s": 1.4697,
+        "total_s": 1.827,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 357.12,
+        "T_TTS_ms": 1469.73,
+        "T_Total_ms": 1827.03,
+        "audio_entrada": "evidencia-lab4/audios/05-04-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/05-04-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0
+        },
+        "entidades": {},
+        "transcripcion_correcta": "Confirmo el pedido.",
+        "calidad_voz": {
+          "retrotranscripcion": "venido uno registrado por 40 euros.",
+          "wer_tts": 0.4286,
+          "cer_tts": 0.2286,
+          "secs": 0.5558,
+          "wer_asr": 0.0
+        }
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "06",
+    "nombre": "Caída de stock y doble confirmación",
+    "modo": "voz",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 0,
+        "A2": 6,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": [
+        {
+          "order_id": 1,
+          "session_id": "06",
+          "signature": "55ba7b712576ca3e",
+          "items": [
+            {
+              "product_id": "A2",
+              "title": "Auriculares negros",
+              "brand": "Desconocido",
+              "color": "negro",
+              "quantity": 2,
+              "unit_price": 25.0,
+              "subtotal": 50.0,
+              "available_stock": 8,
+              "stock_ok": true
+            }
+          ],
+          "total": 50.0,
+          "max_budget": null
+        }
+      ]
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0435,
+        "agente_s": 3.7288,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 43.5,
+        "T_LLM_ms": 3728.8,
+        "asr_s": 0.4445,
+        "tts_s": 17.885,
+        "total_s": 22.1019,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 444.51,
+        "T_TTS_ms": 17885.04,
+        "T_Total_ms": 22101.87,
+        "audio_entrada": "evidencia-lab4/audios/06-01-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/06-01-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0484
+        },
+        "entidades": {},
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones.",
+        "calidad_voz": {
+          "retrotranscripcion": "auriculares negros codiguados 25 euros ocho en stock marca desconocido color negro auriculares azules codigo uno 20 euros 10 en stock marca desconocido color azul cargador usb c código 1, 15 euros, 7 en stock, marca desconocido, color blanco, indica el código y la cantidad que quieres.",
+          "wer_tts": 0.1569,
+          "cer_tts": 0.0772,
+          "secs": 0.6833,
+          "wer_asr": 0.0
+        }
+      },
+      {
+        "entrada": "Agrega dos unidades del producto A1 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 2,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "06",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 4.8858,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 4885.8,
+        "asr_s": 0.4872,
+        "tts_s": 4.4006,
+        "total_s": 9.7736,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 487.18,
+        "T_TTS_ms": 4400.58,
+        "T_Total_ms": 9773.6,
+        "audio_entrada": "evidencia-lab4/audios/06-02-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/06-02-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0682
+        },
+        "entidades": {
+          "cantidad": [
+            {
+              "variantes": "dos|2",
+              "error": false
+            }
+          ],
+          "producto": [
+            {
+              "variantes": "a1|a uno|a un|a 1",
+              "error": false
+            }
+          ]
+        },
+        "transcripcion_correcta": "Agrega dos unidades del producto A1 al carrito.",
+        "calidad_voz": {
+          "retrotranscripcion": "cotización 2 de auriculares azules total 40 euros para registrar el pedido de confirmó el pedido",
+          "wer_tts": 0.1176,
+          "cer_tts": 0.0404,
+          "secs": 0.7032,
+          "wer_asr": 0.0
+        }
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "out_of_stock",
+            "product_id": "A1",
+            "requested": 2,
+            "available": 0,
+            "stock_issues": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "requested": 2,
+                "available": 0
+              }
+            ],
+            "message": "Las existencias cambiaron antes de confirmar: el producto A1 ('Auriculares azules') tiene 0 unidades disponibles y se solicitaron 2. Pedido abortado sin cambios parciales."
+          },
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0483,
+        "agente_s": 0.0003,
+        "respuesta": "Las existencias cambiaron antes de confirmar: el producto A1 ('Auriculares azules') tiene 0 unidades disponibles y se solicitaron 2. Pedido abortado sin cambios parciales. Alternativas encontradas: Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica cuál prefieres.",
+        "T_RAG_ms": 48.3,
+        "T_LLM_ms": 0.3,
+        "asr_s": 0.3955,
+        "tts_s": 18.3675,
+        "total_s": 18.8115,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 395.47,
+        "T_TTS_ms": 18367.45,
+        "T_Total_ms": 18811.53,
+        "audio_entrada": "evidencia-lab4/audios/06-03-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/06-03-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0519
+        },
+        "entidades": {},
+        "transcripcion_correcta": "Confirmo el pedido.",
+        "calidad_voz": {
+          "retrotranscripcion": "Las existencias cambiaron antes de confirmar el producto A1 auriculares azules, quienes eran unidades disponibles y se solicitaron dos, pedido abortados sin cambios parciales, alternativas encontradas, auriculares negros, código A2, 25 euros, 8 en stock meal, marca desconocido, color, negro, cargador, USB-C, código cuno, 15 euros, 7 en stock. Marca, desconocido, color, blanco, indica cuál prefieres.",
+          "wer_tts": 0.1379,
+          "cer_tts": 0.0672,
+          "secs": 0.7404,
+          "wer_asr": 0.0
+        }
+      },
+      {
+        "entrada": "quita el producto A1 y agrega dos unidades del producto A2 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "removed",
+            "product_id": "A1",
+            "message": "Producto A1 eliminado del carrito."
+          },
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A2",
+            "title": "Auriculares negros",
+            "quantity": 2,
+            "unit_price": 25.0,
+            "available_stock": 8
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "06",
+            "items": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "quantity": 2,
+                "unit_price": 25.0,
+                "subtotal": 50.0,
+                "available_stock": 8,
+                "stock_ok": true
+              }
+            ],
+            "total": 50.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 3.4904,
+        "respuesta": "Cotización: 2 de Auriculares negros. Total: 50.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 3490.4,
+        "asr_s": 0.6212,
+        "tts_s": 4.7057,
+        "total_s": 8.8173,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 621.24,
+        "T_TTS_ms": 4705.68,
+        "T_Total_ms": 8817.32,
+        "audio_entrada": "evidencia-lab4/audios/06-04-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/06-04-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0682
+        },
+        "entidades": {
+          "cantidad": [
+            {
+              "variantes": "dos|2",
+              "error": false
+            }
+          ],
+          "producto": [
+            {
+              "variantes": "a1|a uno|a un|a 1",
+              "error": false
+            },
+            {
+              "variantes": "a2|a dos|a 2",
+              "error": false
+            }
+          ]
+        },
+        "transcripcion_correcta": "Quita el producto A1 y agrega dos unidades del producto A2 al carrito.",
+        "calidad_voz": {
+          "retrotranscripcion": "cotización 2 de auriculares negros total 50 euros punto para registrar el pedido di confirmo el pedido",
+          "wer_tts": 0.1176,
+          "cer_tts": 0.0909,
+          "secs": 0.7021,
+          "wer_asr": 0.0
+        }
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "success",
+            "order": {
+              "order_id": 1,
+              "session_id": "06",
+              "signature": "55ba7b712576ca3e",
+              "items": [
+                {
+                  "product_id": "A2",
+                  "title": "Auriculares negros",
+                  "brand": "Desconocido",
+                  "color": "negro",
+                  "quantity": 2,
+                  "unit_price": 25.0,
+                  "subtotal": 50.0,
+                  "available_stock": 8,
+                  "stock_ok": true
+                }
+              ],
+              "total": 50.0,
+              "max_budget": null
+            }
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0002,
+        "respuesta": "Pedido 1 registrado por 50.00 euros.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.2,
+        "asr_s": 0.3738,
+        "tts_s": 1.7735,
+        "total_s": 2.1476,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 373.84,
+        "T_TTS_ms": 1773.54,
+        "T_Total_ms": 2147.57,
+        "audio_entrada": "evidencia-lab4/audios/06-05-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/06-05-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0
+        },
+        "entidades": {},
+        "transcripcion_correcta": "Confirmo el pedido.",
+        "calidad_voz": {
+          "retrotranscripcion": "PENIDO 1 REGISTRADO POR 50 EUROS",
+          "wer_tts": 0.2857,
+          "cer_tts": 0.1143,
+          "secs": 0.64,
+          "wer_asr": 0.0
+        }
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "duplicate_order",
+            "order_id": 1,
+            "order": {
+              "order_id": 1,
+              "session_id": "06",
+              "signature": "55ba7b712576ca3e",
+              "items": [
+                {
+                  "product_id": "A2",
+                  "title": "Auriculares negros",
+                  "brand": "Desconocido",
+                  "color": "negro",
+                  "quantity": 2,
+                  "unit_price": 25.0,
+                  "subtotal": 50.0,
+                  "available_stock": 8,
+                  "stock_ok": true
+                }
+              ],
+              "total": 50.0,
+              "max_budget": null
+            },
+            "message": "El pedido #1 ya fue confirmado y registrado previamente. Se bloqueó la creación de un pedido duplicado."
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0001,
+        "respuesta": "El pedido #1 ya fue confirmado y registrado previamente. Se bloqueó la creación de un pedido duplicado.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.1,
+        "asr_s": 0.3681,
+        "tts_s": 3.8996,
+        "total_s": 4.2678,
+        "desde_fin_grabacion_s": null,
+        "T_ASR_ms": 368.08,
+        "T_TTS_ms": 3899.61,
+        "T_Total_ms": 4267.8,
+        "audio_entrada": "evidencia-lab4/audios/06-06-entrada.wav",
+        "audio_salida": "evidencia-lab4/audios/06-06-respuesta.wav",
+        "disyuncion_textual": {
+          "disjoint_ok": true,
+          "lexical_jaccard_overlap": 0.0667
+        },
+        "entidades": {},
+        "transcripcion_correcta": "Confirmo el pedido.",
+        "calidad_voz": {
+          "retrotranscripcion": "El pedido numeral 1 ya fue confirmado y registrado previamente. Se bloqueó la creación de un pedido duplicado.",
+          "wer_tts": 0.0588,
+          "cer_tts": 0.08,
+          "secs": 0.6794,
+          "wer_asr": 0.0
+        }
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": [
+      {
+        "antes_del_turno": 3,
+        "producto": "A1",
+        "stock": 0
+      }
+    ]
+  },
+  {
+    "id": "07",
+    "nombre": "Pedido multiproducto",
+    "modo": "texto",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 9,
+        "A2": 6,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": [
+        {
+          "order_id": 1,
+          "session_id": "07",
+          "signature": "0549e7c29c6bf6b8",
+          "items": [
+            {
+              "product_id": "A1",
+              "title": "Auriculares azules",
+              "brand": "Desconocido",
+              "color": "azul",
+              "quantity": 1,
+              "unit_price": 20.0,
+              "subtotal": 20.0,
+              "available_stock": 10,
+              "stock_ok": true
+            },
+            {
+              "product_id": "A2",
+              "title": "Auriculares negros",
+              "brand": "Desconocido",
+              "color": "negro",
+              "quantity": 2,
+              "unit_price": 25.0,
+              "subtotal": 50.0,
+              "available_stock": 8,
+              "stock_ok": true
+            }
+          ],
+          "total": 70.0,
+          "max_budget": null
+        }
+      ]
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0352,
+        "agente_s": 3.7163,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 35.2,
+        "T_LLM_ms": 3716.3,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Agrega una unidad del producto A1 y dos del producto A2.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 1,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A2",
+            "title": "Auriculares negros",
+            "quantity": 2,
+            "unit_price": 25.0,
+            "available_stock": 8
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "07",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 1,
+                "unit_price": 20.0,
+                "subtotal": 20.0,
+                "available_stock": 10,
+                "stock_ok": true
+              },
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "quantity": 2,
+                "unit_price": 25.0,
+                "subtotal": 50.0,
+                "available_stock": 8,
+                "stock_ok": true
+              }
+            ],
+            "total": 70.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 5.5908,
+        "respuesta": "Cotización: 1 de Auriculares azules; 2 de Auriculares negros. Total: 70.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 5590.8,
+        "transcripcion_correcta": "Agrega una unidad del producto A1 y dos del producto A2."
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "success",
+            "order": {
+              "order_id": 1,
+              "session_id": "07",
+              "signature": "0549e7c29c6bf6b8",
+              "items": [
+                {
+                  "product_id": "A1",
+                  "title": "Auriculares azules",
+                  "brand": "Desconocido",
+                  "color": "azul",
+                  "quantity": 1,
+                  "unit_price": 20.0,
+                  "subtotal": 20.0,
+                  "available_stock": 10,
+                  "stock_ok": true
+                },
+                {
+                  "product_id": "A2",
+                  "title": "Auriculares negros",
+                  "brand": "Desconocido",
+                  "color": "negro",
+                  "quantity": 2,
+                  "unit_price": 25.0,
+                  "subtotal": 50.0,
+                  "available_stock": 8,
+                  "stock_ok": true
+                }
+              ],
+              "total": 70.0,
+              "max_budget": null
+            }
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0001,
+        "respuesta": "Pedido 1 registrado por 70.00 euros.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.1,
+        "transcripcion_correcta": "Confirmo el pedido."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "08",
+    "nombre": "Presupuesto insuficiente",
+    "modo": "texto",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {
+        "A1": 2
+      },
+      "presupuesto": 10.0,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares. Tengo un presupuesto máximo de 10 euros.",
+        "operaciones": [
+          {
+            "accion": "presupuesto",
+            "status": "success",
+            "session_id": "08",
+            "max_budget": 10.0
+          },
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "Busca auriculares. Tengo un presupuesto máximo de 10 euros.",
+            "resultados": [
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          },
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "Busca auriculares. Tengo un presupuesto máximo de 10 euros.",
+            "resultados": []
+          }
+        ],
+        "rag_s": 0.142,
+        "agente_s": 3.2261,
+        "respuesta": "Auriculares verdes, código A3. 18.00 euros, 0 en stock. Marca: Desconocido. Color: verde. No encontré una alternativa disponible dentro del presupuesto.",
+        "T_RAG_ms": 142.0,
+        "T_LLM_ms": 3226.1,
+        "transcripcion_correcta": "Busca auriculares. Tengo un presupuesto máximo de 10 euros."
+      },
+      {
+        "entrada": "Agrega dos unidades del producto A1 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 2,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "08",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": 10.0,
+            "within_budget": false,
+            "budget_remaining": -30.0,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 3.0821,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Presupuesto: 10.00 euros. El total supera el presupuesto.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 3082.1,
+        "transcripcion_correcta": "Agrega dos unidades del producto A1 al carrito."
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "budget_exceeded",
+            "total": 40.0,
+            "max_budget": 10.0,
+            "message": "El total supera el presupuesto máximo asignado."
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0,
+        "respuesta": "No se puede confirmar el pedido porque el total (40.00 euros) supera tu presupuesto máximo (10.00 euros).",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.0,
+        "transcripcion_correcta": "Confirmo el pedido."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "09",
+    "nombre": "Cantidad negativa",
+    "modo": "texto",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.033,
+        "agente_s": 3.6568,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 33.0,
+        "T_LLM_ms": 3656.8,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Agrega menos dos unidades del producto A1.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "error",
+            "message": "La cantidad no puede ser negativa (use 0 para eliminar)."
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0,
+        "respuesta": "La cantidad no puede ser negativa (use 0 para eliminar).",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.0,
+        "transcripcion_correcta": "Agrega menos dos unidades del producto A1."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "10",
+    "nombre": "Detalle verificable",
+    "modo": "texto",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0347,
+        "agente_s": 3.7859,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 34.7,
+        "T_LLM_ms": 3785.9,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Consulta el detalle del producto A1.",
+        "operaciones": [
+          {
+            "accion": "detalle",
+            "tool": "consultar_producto",
+            "resultados": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado",
+                "price": 20.0,
+                "stock": 10
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 4.7511,
+        "respuesta": "Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Descripción: Auriculares supraaurales azules con micrófono integrado. Características: Inalámbricos Bluetooth 5.0.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 4751.1,
+        "transcripcion_correcta": "Consulta el detalle del producto A1."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "11",
+    "nombre": "Atributo desconocido",
+    "modo": "texto",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0346,
+        "agente_s": 3.7193,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 34.6,
+        "T_LLM_ms": 3719.3,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Consulta la marca del producto A1.",
+        "operaciones": [
+          {
+            "accion": "detalle",
+            "tool": "consultar_producto",
+            "resultados": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado",
+                "price": 20.0,
+                "stock": 10
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 5.1993,
+        "respuesta": "Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Descripción: Auriculares supraaurales azules con micrófono integrado. Características: Inalámbricos Bluetooth 5.0.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 5199.3,
+        "transcripcion_correcta": "Consulta la marca del producto A1."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "12",
+    "nombre": "Eliminación de ítem del carrito",
+    "modo": "texto",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0339,
+        "agente_s": 3.6656,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 33.9,
+        "T_LLM_ms": 3665.6,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Agrega dos unidades del producto A1 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 2,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "12",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 4.8467,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 4846.7,
+        "transcripcion_correcta": "Agrega dos unidades del producto A1 al carrito."
+      },
+      {
+        "entrada": "Quita el producto A1 del carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "removed",
+            "product_id": "A1",
+            "message": "Producto A1 eliminado del carrito."
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "12",
+            "items": [],
+            "total": 0.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 3.0012,
+        "respuesta": "El carrito está vacío.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 3001.2,
+        "transcripcion_correcta": "Quita el producto A1 del carrito."
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "error",
+            "message": "El carrito está vacío."
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0,
+        "respuesta": "El carrito está vacío.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.0,
+        "transcripcion_correcta": "Confirmo el pedido."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "13",
+    "nombre": "Confirmación sin carrito",
+    "modo": "texto",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "error",
+            "message": "El carrito está vacío."
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0,
+        "respuesta": "El carrito está vacío.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.0,
+        "transcripcion_correcta": "Confirmo el pedido."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "14",
+    "nombre": "Negación de confirmación",
+    "modo": "texto",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {
+        "A1": 2
+      },
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0338,
+        "agente_s": 3.6955,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 33.8,
+        "T_LLM_ms": 3695.5,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Agrega dos unidades del producto A1 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 2,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "14",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 4.8555,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 4855.5,
+        "transcripcion_correcta": "Agrega dos unidades del producto A1 al carrito."
+      },
+      {
+        "entrada": "No confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "cancelar_confirmacion"
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0,
+        "respuesta": "Confirmación cancelada. Los artículos siguen en tu carrito.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.0,
+        "transcripcion_correcta": "No confirmo el pedido."
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [],
+        "rag_s": 0.0,
+        "agente_s": 0.0,
+        "respuesta": "Primero solicita una cotización válida antes de confirmar el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.0,
+        "transcripcion_correcta": "Confirmo el pedido."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "15",
+    "nombre": "Cantidad superior al stock",
+    "modo": "texto",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0339,
+        "agente_s": 3.658,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 33.9,
+        "T_LLM_ms": 3658.0,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Agrega 99 unidades del producto A1.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "insufficient_stock",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "requested": 99,
+            "available": 10,
+            "message": "Existencias insuficientes para 'Auriculares azules' (A1): solicitaste 99, pero solo hay 10 en stock."
+          },
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": []
+          }
+        ],
+        "rag_s": 0.0348,
+        "agente_s": 4.8732,
+        "respuesta": "Existencias insuficientes para 'Auriculares azules' (A1): solicitaste 99, pero solo hay 10 en stock. No encontré alternativas disponibles para la cantidad y el presupuesto indicados.",
+        "T_RAG_ms": 34.8,
+        "T_LLM_ms": 4873.2,
+        "transcripcion_correcta": "Agrega 99 unidades del producto A1."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "16",
+    "nombre": "Comparación sin modificar carrito",
+    "modo": "texto",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0367,
+        "agente_s": 3.7552,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 36.7,
+        "T_LLM_ms": 3755.2,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "17",
+    "nombre": "Reducción de presupuesto",
+    "modo": "texto",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {
+        "A1": 2
+      },
+      "presupuesto": 5.0,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0334,
+        "agente_s": 3.665,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 33.4,
+        "T_LLM_ms": 3665.0,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Agrega dos unidades del producto A1 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 2,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "17",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 4.7367,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 4736.7,
+        "transcripcion_correcta": "Agrega dos unidades del producto A1 al carrito."
+      },
+      {
+        "entrada": "Cambia mi presupuesto máximo a 5 euros y vuelve a cotizar.",
+        "operaciones": [
+          {
+            "accion": "presupuesto",
+            "status": "success",
+            "session_id": "17",
+            "max_budget": 5.0
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "17",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": 5.0,
+            "within_budget": false,
+            "budget_remaining": -35.0,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 3.0939,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Presupuesto: 5.00 euros. El total supera el presupuesto.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 3093.9,
+        "transcripcion_correcta": "Cambia mi presupuesto máximo a 5 euros y vuelve a cotizar."
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "budget_exceeded",
+            "total": 40.0,
+            "max_budget": 5.0,
+            "message": "El total supera el presupuesto máximo asignado."
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0001,
+        "respuesta": "No se puede confirmar el pedido porque el total (40.00 euros) supera tu presupuesto máximo (5.00 euros).",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.1,
+        "transcripcion_correcta": "Confirmo el pedido."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "18",
+    "nombre": "Preferencia y cambio de cantidad",
+    "modo": "texto",
+    "exito": false,
+    "diferencias": [
+      "Carrito esperado {'A1': 3}, obtenido {'A1': 2}."
+    ],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {
+        "A1": 2
+      },
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares azules; mi preferencia es el color azul.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares azules color azul",
+            "resultados": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0421,
+        "agente_s": 2.9399,
+        "respuesta": "Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 42.1,
+        "T_LLM_ms": 2939.9,
+        "transcripcion_correcta": "Busca auriculares azules; mi preferencia es el color azul."
+      },
+      {
+        "entrada": "Agrega dos unidades del producto A1 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 2,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "18",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 3.2977,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 3297.7,
+        "transcripcion_correcta": "Agrega dos unidades del producto A1 al carrito."
+      },
+      {
+        "entrada": "Cambia la cantidad del producto A1 a tres unidades, mantén mi preferencia.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 3,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "insufficient_stock",
+            "product_id": "A3",
+            "title": "Auriculares verdes",
+            "requested": 3,
+            "available": 0,
+            "message": "Existencias insuficientes para 'Auriculares verdes' (A3): solicitaste 3, pero solo hay 0 en stock."
+          },
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares azules color azul",
+            "resultados": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0412,
+        "agente_s": 1.9413,
+        "respuesta": "Existencias insuficientes para 'Auriculares verdes' (A3): solicitaste 3, pero solo hay 0 en stock. Alternativas encontradas: Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica cuál prefieres.",
+        "T_RAG_ms": 41.2,
+        "T_LLM_ms": 1941.3,
+        "transcripcion_correcta": "Cambia la cantidad del producto A1 a tres unidades, mantén mi preferencia."
+      }
+    ],
+    "preferencias_finales": "color azul",
+    "eventos_externos": []
+  },
+  {
+    "id": "19",
+    "nombre": "Rechazo de código inexistente",
+    "modo": "texto",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0493,
+        "agente_s": 4.0668,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 49.3,
+        "T_LLM_ms": 4066.8,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Agrega dos unidades del producto Z999.",
+        "operaciones": [],
+        "rag_s": 0.0,
+        "agente_s": 5.5527,
+        "respuesta": "Indica un código de producto válido de las opciones mostradas en el catálogo.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 5552.7,
+        "transcripcion_correcta": "Agrega dos unidades del producto Z999."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "20",
+    "nombre": "Sin permiso de compra",
+    "modo": "texto",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {
+        "A1": 2
+      },
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "Busca auriculares para comparar las opciones.",
+            "resultados": [
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0729,
+        "agente_s": 2.1617,
+        "respuesta": "Auriculares verdes, código A3. 18.00 euros, 0 en stock. Marca: Desconocido. Color: verde. Otras opciones disponibles: Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 72.9,
+        "T_LLM_ms": 2161.7,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Agrega dos unidades del producto A1 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 2,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "20",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 5.284,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 5284.0,
+        "transcripcion_correcta": "Agrega dos unidades del producto A1 al carrito."
+      },
+      {
+        "entrada": "No hagas la compra todavía.",
+        "operaciones": [
+          {
+            "accion": "cancelar_confirmacion"
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0,
+        "respuesta": "Confirmación cancelada. Los artículos siguen en tu carrito.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.0,
+        "transcripcion_correcta": "No hagas la compra todavía."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "01",
+    "nombre": "Compra válida",
+    "modo": "oracle",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 8,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": [
+        {
+          "order_id": 1,
+          "session_id": "01",
+          "signature": "5754b9baf458a0f1",
+          "items": [
+            {
+              "product_id": "A1",
+              "title": "Auriculares azules",
+              "brand": "Desconocido",
+              "color": "azul",
+              "quantity": 2,
+              "unit_price": 20.0,
+              "subtotal": 40.0,
+              "available_stock": 10,
+              "stock_ok": true
+            }
+          ],
+          "total": 40.0,
+          "max_budget": null
+        }
+      ]
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0333,
+        "agente_s": 3.7714,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 33.3,
+        "T_LLM_ms": 3771.4,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Agrega dos unidades del producto A1 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 2,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "01",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 4.8669,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 4866.9,
+        "transcripcion_correcta": "Agrega dos unidades del producto A1 al carrito."
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "success",
+            "order": {
+              "order_id": 1,
+              "session_id": "01",
+              "signature": "5754b9baf458a0f1",
+              "items": [
+                {
+                  "product_id": "A1",
+                  "title": "Auriculares azules",
+                  "brand": "Desconocido",
+                  "color": "azul",
+                  "quantity": 2,
+                  "unit_price": 20.0,
+                  "subtotal": 40.0,
+                  "available_stock": 10,
+                  "stock_ok": true
+                }
+              ],
+              "total": 40.0,
+              "max_budget": null
+            }
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0001,
+        "respuesta": "Pedido 1 registrado por 40.00 euros.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.1,
+        "transcripcion_correcta": "Confirmo el pedido."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "02",
+    "nombre": "Aclaración por solicitud ambigua",
+    "modo": "oracle",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0375,
+        "agente_s": 3.8138,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 37.5,
+        "T_LLM_ms": 3813.8,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Agrégalo al carrito.",
+        "operaciones": [
+          {
+            "accion": "aclarar"
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 4.9807,
+        "respuesta": "¿Cuál código y cantidad te gustaría añadir al carrito?",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 4980.7,
+        "transcripcion_correcta": "Agrégalo al carrito."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "03",
+    "nombre": "Cambio de cantidad con presupuesto",
+    "modo": "oracle",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 9,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": 70.0,
+      "pedidos": [
+        {
+          "order_id": 1,
+          "session_id": "03",
+          "signature": "d46d55bde46e0927",
+          "items": [
+            {
+              "product_id": "A1",
+              "title": "Auriculares azules",
+              "brand": "Desconocido",
+              "color": "azul",
+              "quantity": 1,
+              "unit_price": 20.0,
+              "subtotal": 20.0,
+              "available_stock": 10,
+              "stock_ok": true
+            }
+          ],
+          "total": 20.0,
+          "max_budget": 70.0
+        }
+      ]
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares con presupuesto máximo de 70 euros.",
+        "operaciones": [
+          {
+            "accion": "presupuesto",
+            "status": "success",
+            "session_id": "03",
+            "max_budget": 70.0
+          },
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "presupuesto máximo de 70 euros",
+            "resultados": [
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0443,
+        "agente_s": 3.1937,
+        "respuesta": "Auriculares verdes, código A3. 18.00 euros, 0 en stock. Marca: Desconocido. Color: verde. Otras opciones disponibles: Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 44.3,
+        "T_LLM_ms": 3193.7,
+        "transcripcion_correcta": "Busca auriculares con presupuesto máximo de 70 euros."
+      },
+      {
+        "entrada": "Agrega dos unidades del producto A1 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 2,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "03",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": 70.0,
+            "within_budget": true,
+            "budget_remaining": 30.0,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 5.2404,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Presupuesto: 70.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 5240.4,
+        "transcripcion_correcta": "Agrega dos unidades del producto A1 al carrito."
+      },
+      {
+        "entrada": "Cambia la cantidad del producto A1 a una unidad.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 1,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "03",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 1,
+                "unit_price": 20.0,
+                "subtotal": 20.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 20.0,
+            "max_budget": 70.0,
+            "within_budget": true,
+            "budget_remaining": 50.0,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 5.0178,
+        "respuesta": "Cotización: 1 de Auriculares azules. Total: 20.00 euros. Presupuesto: 70.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 5017.8,
+        "transcripcion_correcta": "Cambia la cantidad del producto A1 a una unidad."
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "success",
+            "order": {
+              "order_id": 1,
+              "session_id": "03",
+              "signature": "d46d55bde46e0927",
+              "items": [
+                {
+                  "product_id": "A1",
+                  "title": "Auriculares azules",
+                  "brand": "Desconocido",
+                  "color": "azul",
+                  "quantity": 1,
+                  "unit_price": 20.0,
+                  "subtotal": 20.0,
+                  "available_stock": 10,
+                  "stock_ok": true
+                }
+              ],
+              "total": 20.0,
+              "max_budget": 70.0
+            }
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0001,
+        "respuesta": "Pedido 1 registrado por 20.00 euros.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.1,
+        "transcripcion_correcta": "Confirmo el pedido."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "04",
+    "nombre": "Producto agotado al agregar",
+    "modo": "oracle",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "Busca auriculares para comparar las opciones.",
+            "resultados": [
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0663,
+        "agente_s": 2.1787,
+        "respuesta": "Auriculares verdes, código A3. 18.00 euros, 0 en stock. Marca: Desconocido. Color: verde. Otras opciones disponibles: Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 66.3,
+        "T_LLM_ms": 2178.7,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Agrega una unidad del producto A3 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "insufficient_stock",
+            "product_id": "A3",
+            "title": "Auriculares verdes",
+            "requested": 1,
+            "available": 0,
+            "message": "Existencias insuficientes para 'Auriculares verdes' (A3): solicitaste 1, pero solo hay 0 en stock."
+          },
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "Busca auriculares para comparar las opciones.",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0649,
+        "agente_s": 5.1421,
+        "respuesta": "Existencias insuficientes para 'Auriculares verdes' (A3): solicitaste 1, pero solo hay 0 en stock. Alternativas encontradas: Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica cuál prefieres.",
+        "T_RAG_ms": 64.9,
+        "T_LLM_ms": 5142.1,
+        "transcripcion_correcta": "Agrega una unidad del producto A3 al carrito."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "05",
+    "nombre": "Corrección de transcripción",
+    "modo": "oracle",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 8,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": [
+        {
+          "order_id": 1,
+          "session_id": "05",
+          "signature": "5754b9baf458a0f1",
+          "items": [
+            {
+              "product_id": "A1",
+              "title": "Auriculares azules",
+              "brand": "Desconocido",
+              "color": "azul",
+              "quantity": 2,
+              "unit_price": 20.0,
+              "subtotal": 40.0,
+              "available_stock": 10,
+              "stock_ok": true
+            }
+          ],
+          "total": 40.0,
+          "max_budget": null
+        }
+      ]
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0344,
+        "agente_s": 3.9281,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 34.4,
+        "T_LLM_ms": 3928.1,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Agrega cinco unidades del producto A1 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 5,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "05",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 5,
+                "unit_price": 20.0,
+                "subtotal": 100.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 100.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 5.209,
+        "respuesta": "Cotización: 5 de Auriculares azules. Total: 100.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 5209.0,
+        "transcripcion_correcta": "Agrega cinco unidades del producto A1 al carrito."
+      },
+      {
+        "entrada": "Corrijo la transcripción anterior: dije dos unidades del producto A1, no cinco.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 2,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "05",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 2.1482,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 2148.2,
+        "transcripcion_correcta": "Corrijo la transcripción anterior: dije dos unidades del producto A1, no cinco."
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "success",
+            "order": {
+              "order_id": 1,
+              "session_id": "05",
+              "signature": "5754b9baf458a0f1",
+              "items": [
+                {
+                  "product_id": "A1",
+                  "title": "Auriculares azules",
+                  "brand": "Desconocido",
+                  "color": "azul",
+                  "quantity": 2,
+                  "unit_price": 20.0,
+                  "subtotal": 40.0,
+                  "available_stock": 10,
+                  "stock_ok": true
+                }
+              ],
+              "total": 40.0,
+              "max_budget": null
+            }
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0001,
+        "respuesta": "Pedido 1 registrado por 40.00 euros.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.1,
+        "transcripcion_correcta": "Confirmo el pedido."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": []
+  },
+  {
+    "id": "06",
+    "nombre": "Caída de stock y doble confirmación",
+    "modo": "oracle",
+    "exito": true,
+    "diferencias": [],
+    "infracciones": [],
+    "inicial": {
+      "inventario": {
+        "A1": 10,
+        "A2": 8,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": []
+    },
+    "final": {
+      "inventario": {
+        "A1": 0,
+        "A2": 6,
+        "A3": 0,
+        "C1": 7
+      },
+      "carrito": {},
+      "presupuesto": null,
+      "pedidos": [
+        {
+          "order_id": 1,
+          "session_id": "06",
+          "signature": "55ba7b712576ca3e",
+          "items": [
+            {
+              "product_id": "A2",
+              "title": "Auriculares negros",
+              "brand": "Desconocido",
+              "color": "negro",
+              "quantity": 2,
+              "unit_price": 25.0,
+              "subtotal": 50.0,
+              "available_stock": 8,
+              "stock_ok": true
+            }
+          ],
+          "total": 50.0,
+          "max_budget": null
+        }
+      ]
+    },
+    "turnos": [
+      {
+        "entrada": "Busca auriculares para comparar las opciones.",
+        "operaciones": [
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "price": 20.0,
+                "stock": 10,
+                "bullet_point": "Inalámbricos Bluetooth 5.0",
+                "description": "Auriculares supraaurales azules con micrófono integrado"
+              },
+              {
+                "product_id": "A3",
+                "title": "Auriculares verdes",
+                "brand": "Desconocido",
+                "color": "verde",
+                "price": 18.0,
+                "stock": 0,
+                "bullet_point": "Edición ligera",
+                "description": "Auriculares verdes compactos"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0353,
+        "agente_s": 3.8154,
+        "respuesta": "Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Auriculares azules, código A1. 20.00 euros, 10 en stock. Marca: Desconocido. Color: azul. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica el código y la cantidad que quieres.",
+        "T_RAG_ms": 35.3,
+        "T_LLM_ms": 3815.4,
+        "transcripcion_correcta": "Busca auriculares para comparar las opciones."
+      },
+      {
+        "entrada": "Agrega dos unidades del producto A1 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A1",
+            "title": "Auriculares azules",
+            "quantity": 2,
+            "unit_price": 20.0,
+            "available_stock": 10
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "06",
+            "items": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "brand": "Desconocido",
+                "color": "azul",
+                "quantity": 2,
+                "unit_price": 20.0,
+                "subtotal": 40.0,
+                "available_stock": 10,
+                "stock_ok": true
+              }
+            ],
+            "total": 40.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 4.8962,
+        "respuesta": "Cotización: 2 de Auriculares azules. Total: 40.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 4896.2,
+        "transcripcion_correcta": "Agrega dos unidades del producto A1 al carrito."
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "out_of_stock",
+            "product_id": "A1",
+            "requested": 2,
+            "available": 0,
+            "stock_issues": [
+              {
+                "product_id": "A1",
+                "title": "Auriculares azules",
+                "requested": 2,
+                "available": 0
+              }
+            ],
+            "message": "Las existencias cambiaron antes de confirmar: el producto A1 ('Auriculares azules') tiene 0 unidades disponibles y se solicitaron 2. Pedido abortado sin cambios parciales."
+          },
+          {
+            "accion": "buscar",
+            "tool": "buscar_catalogo",
+            "consulta": "auriculares",
+            "resultados": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "price": 25.0,
+                "stock": 8,
+                "bullet_point": "Cancelación pasiva, estuche USB-C",
+                "description": "Auriculares deportivos negros resistentes al sudor"
+              },
+              {
+                "product_id": "C1",
+                "title": "Cargador USB-C",
+                "brand": "Desconocido",
+                "color": "blanco",
+                "price": 15.0,
+                "stock": 7,
+                "bullet_point": "Carga rápida 20W",
+                "description": "Adaptador de corriente USB-C blanco"
+              }
+            ]
+          }
+        ],
+        "rag_s": 0.0342,
+        "agente_s": 0.0002,
+        "respuesta": "Las existencias cambiaron antes de confirmar: el producto A1 ('Auriculares azules') tiene 0 unidades disponibles y se solicitaron 2. Pedido abortado sin cambios parciales. Alternativas encontradas: Auriculares negros, código A2. 25.00 euros, 8 en stock. Marca: Desconocido. Color: negro. Cargador USB-C, código C1. 15.00 euros, 7 en stock. Marca: Desconocido. Color: blanco. Indica cuál prefieres.",
+        "T_RAG_ms": 34.2,
+        "T_LLM_ms": 0.2,
+        "transcripcion_correcta": "Confirmo el pedido."
+      },
+      {
+        "entrada": "Quita el producto A1 y agrega dos unidades del producto A2 al carrito.",
+        "operaciones": [
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "removed",
+            "product_id": "A1",
+            "message": "Producto A1 eliminado del carrito."
+          },
+          {
+            "accion": "carrito",
+            "tool": "gestionar_carrito",
+            "status": "updated",
+            "product_id": "A2",
+            "title": "Auriculares negros",
+            "quantity": 2,
+            "unit_price": 25.0,
+            "available_stock": 8
+          },
+          {
+            "accion": "cotizar",
+            "tool": "obtener_cotizacion",
+            "status": "success",
+            "session_id": "06",
+            "items": [
+              {
+                "product_id": "A2",
+                "title": "Auriculares negros",
+                "brand": "Desconocido",
+                "color": "negro",
+                "quantity": 2,
+                "unit_price": 25.0,
+                "subtotal": 50.0,
+                "available_stock": 8,
+                "stock_ok": true
+              }
+            ],
+            "total": 50.0,
+            "max_budget": null,
+            "within_budget": true,
+            "budget_remaining": null,
+            "all_stock_ok": true,
+            "stock_issues": []
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 3.5867,
+        "respuesta": "Cotización: 2 de Auriculares negros. Total: 50.00 euros. Para registrar el pedido, di: confirmo el pedido.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 3586.7,
+        "transcripcion_correcta": "Quita el producto A1 y agrega dos unidades del producto A2 al carrito."
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "success",
+            "order": {
+              "order_id": 1,
+              "session_id": "06",
+              "signature": "55ba7b712576ca3e",
+              "items": [
+                {
+                  "product_id": "A2",
+                  "title": "Auriculares negros",
+                  "brand": "Desconocido",
+                  "color": "negro",
+                  "quantity": 2,
+                  "unit_price": 25.0,
+                  "subtotal": 50.0,
+                  "available_stock": 8,
+                  "stock_ok": true
+                }
+              ],
+              "total": 50.0,
+              "max_budget": null
+            }
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0001,
+        "respuesta": "Pedido 1 registrado por 50.00 euros.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.1,
+        "transcripcion_correcta": "Confirmo el pedido."
+      },
+      {
+        "entrada": "Confirmo el pedido.",
+        "operaciones": [
+          {
+            "accion": "confirmar",
+            "tool": "confirmar_pedido",
+            "status": "duplicate_order",
+            "order_id": 1,
+            "order": {
+              "order_id": 1,
+              "session_id": "06",
+              "signature": "55ba7b712576ca3e",
+              "items": [
+                {
+                  "product_id": "A2",
+                  "title": "Auriculares negros",
+                  "brand": "Desconocido",
+                  "color": "negro",
+                  "quantity": 2,
+                  "unit_price": 25.0,
+                  "subtotal": 50.0,
+                  "available_stock": 8,
+                  "stock_ok": true
+                }
+              ],
+              "total": 50.0,
+              "max_budget": null
+            },
+            "message": "El pedido #1 ya fue confirmado y registrado previamente. Se bloqueó la creación de un pedido duplicado."
+          }
+        ],
+        "rag_s": 0.0,
+        "agente_s": 0.0,
+        "respuesta": "El pedido #1 ya fue confirmado y registrado previamente. Se bloqueó la creación de un pedido duplicado.",
+        "T_RAG_ms": 0.0,
+        "T_LLM_ms": 0.0,
+        "transcripcion_correcta": "Confirmo el pedido."
+      }
+    ],
+    "preferencias_finales": "",
+    "eventos_externos": [
+      {
+        "antes_del_turno": 3,
+        "producto": "A1",
+        "stock": 0
+      }
+    ]
+  }
+]

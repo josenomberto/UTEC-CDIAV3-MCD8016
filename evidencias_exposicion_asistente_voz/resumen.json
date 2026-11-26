@@ -1,0 +1,89 @@
+{
+  "escenarios": 20,
+  "exito_pct": 95.0,
+  "incumplimientos": 0,
+  "exito_voz_pct": 100.0,
+  "exito_oracle_pct": 100.0,
+  "errores_asr_entidades": {
+    "cantidad": {
+      "errores": 0,
+      "evaluadas": 9,
+      "tasa": 0.0
+    },
+    "importe": {
+      "errores": 0,
+      "evaluadas": 1,
+      "tasa": 0.0
+    },
+    "producto": {
+      "errores": 1,
+      "evaluadas": 9,
+      "tasa": 0.1111
+    }
+  },
+  "voz": {
+    "wer_asr": 0.0483,
+    "wer_tts": 0.1465,
+    "cer_tts": 0.0771,
+    "secs": 0.6471
+  },
+  "carga_modelos_s": {
+    "embeddings": 13.806,
+    "agente": 26.967,
+    "asr": 7.644,
+    "tts": 23.718,
+    "ecapa": 3.433
+  },
+  "latencias_medias_s": {
+    "asr_s": 0.4635,
+    "rag_s": 0.0199,
+    "agente_s": 2.7619,
+    "tts_s": 8.8104,
+    "total_s": 12.0558
+  },
+  "latencias_medias_ms": {
+    "T_ASR_ms": 463.4714,
+    "T_RAG_ms": 19.9238,
+    "T_LLM_ms": 2761.919,
+    "T_TTS_ms": 8810.4452,
+    "T_Total_ms": 12055.7633
+  },
+  "aciertos": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "19",
+    "20"
+  ],
+  "fallos": [
+    {
+      "id": "18",
+      "evidencia": [
+        "Carrito esperado {'A1': 3}, obtenido {'A1': 2}."
+      ]
+    }
+  ],
+  "semilla": 42,
+  "alpha": 0.8,
+  "modelos": {
+    "recuperacion": "intfloat/multilingual-e5-base",
+    "agente": "Qwen/Qwen2.5-3B-Instruct",
+    "asr": "openai/whisper-small",
+    "tts": "tts_models/multilingual/multi-dataset/xtts_v2",
+    "semejanza": "speechbrain/spkrec-ecapa-voxceleb"
+  }
+}

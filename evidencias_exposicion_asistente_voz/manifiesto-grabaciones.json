@@ -1,0 +1,98 @@
+{
+  "01": [
+    {
+      "audio": "audios/01-01-entrada.wav",
+      "transcripcion": "Busca auriculares para comparar las opciones."
+    },
+    {
+      "audio": "audios/01-02-entrada.wav",
+      "transcripcion": "Agrega dos unidades del producto A1 al carrito."
+    },
+    {
+      "audio": "audios/01-03-entrada.wav",
+      "transcripcion": "Confirmo el pedido."
+    }
+  ],
+  "02": [
+    {
+      "audio": "audios/02-01-entrada.wav",
+      "transcripcion": "Busca auriculares para comparar las opciones."
+    },
+    {
+      "audio": "audios/02-02-entrada.wav",
+      "transcripcion": "Agrégalo al carrito."
+    }
+  ],
+  "03": [
+    {
+      "audio": "audios/03-01-entrada.wav",
+      "transcripcion": "Busca auriculares con presupuesto máximo de 70 euros."
+    },
+    {
+      "audio": "audios/03-02-entrada.wav",
+      "transcripcion": "Agrega dos unidades del producto A1 al carrito."
+    },
+    {
+      "audio": "audios/03-03-entrada.wav",
+      "transcripcion": "Cambia la cantidad del producto A1 a una unidad."
+    },
+    {
+      "audio": "audios/03-04-entrada.wav",
+      "transcripcion": "Confirmo el pedido."
+    }
+  ],
+  "04": [
+    {
+      "audio": "audios/04-01-entrada.wav",
+      "transcripcion": "Busca auriculares para comparar las opciones."
+    },
+    {
+      "audio": "audios/04-02-entrada.wav",
+      "transcripcion": "Agrega una unidad del producto A3 al carrito."
+    }
+  ],
+  "05": [
+    {
+      "audio": "audios/05-01-entrada.wav",
+      "transcripcion": "Busca auriculares para comparar las opciones."
+    },
+    {
+      "audio": "audios/05-02-entrada.wav",
+      "transcripcion": "Agrega cinco unidades del producto A1 al carrito."
+    },
+    {
+      "audio": "audios/05-03-entrada.wav",
+      "transcripcion": "Corrijo la transcripción anterior: dije dos unidades del producto A1, no cinco."
+    },
+    {
+      "audio": "audios/05-04-entrada.wav",
+      "transcripcion": "Confirmo el pedido."
+    }
+  ],
+  "06": [
+    {
+      "audio": "audios/06-01-entrada.wav",
+      "transcripcion": "Busca auriculares para comparar las opciones."
+    },
+    {
+      "audio": "audios/06-02-entrada.wav",
+      "transcripcion": "Agrega dos unidades del producto A1 al carrito."
+    },
+    {
+      "audio": "audios/06-03-entrada.wav",
+      "transcripcion": "Confirmo el pedido."
+    },
+    {
+      "audio": "audios/06-04-entrada.wav",
+      "transcripcion": "Quita el producto A1 y agrega dos unidades del producto A2 al carrito."
+    },
+    {
+      "audio": "audios/06-05-entrada.wav",
+      "transcripcion": "Confirmo el pedido."
+    },
+    {
+      "audio": "audios/06-06-entrada.wav",
+      "transcripcion": "Confirmo el pedido."
+    }
+  ]
+}

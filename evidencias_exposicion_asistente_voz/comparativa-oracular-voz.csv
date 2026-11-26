@@ -1,0 +1,7 @@
+Caso,Escenario,Turnos,Éxito Voz (ASR),Éxito Oracular (Manual),WER ASR Medio,SECS Voz Clonada,Diagnóstico Oracular
+01,Compra válida,3,Sí,Sí,0.0,0.6417,Sin degradación (ASR y Agente correctos)
+02,Aclaración por solicitud ambigua,2,Sí,Sí,0.1666,0.5984,Sin degradación (ASR y Agente correctos)
+03,Cambio de cantidad con presupuesto,4,Sí,Sí,0.0556,0.6146,Sin degradación (ASR y Agente correctos)
+04,Producto agotado al agregar,2,Sí,Sí,0.0,0.6722,Sin degradación (ASR y Agente correctos)
+05,Corrección de transcripción,4,Sí,Sí,0.1146,0.6292,Sin degradación (ASR y Agente correctos)
+06,Caída de stock y doble confirmación,6,Sí,Sí,0.0,0.6914,Sin degradación (ASR y Agente correctos)
